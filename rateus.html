@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rate Us</title>
+  <link rel="stylesheet" href="css/rateus.css">
+</head>
+<body class="rate-page">
+  <header>
+    <h1>Customer Reviews</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="managevacations.html">Manage Vacations</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="analytics.html">Analytics</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="rateus.html" class="active">Rate Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="existingReviews">
+        <h2>Traveler Stories</h2>
+        <div id="reviewsList"></div>
+    </section>
+    <h3>Your review helps others. Share your experience:</h3>
+    <section id="submitReview" class="right-align">
+        <div>
+            <form id="reviewForm" class="form-card">
+                <label for="reviewerName">Name:</label>
+                <input type="text" id="reviewerName" name="reviewerName" required>
+                <label for="reviewText">Review:</label>
+                <textarea id="reviewText" name="reviewText" required></textarea>
+                <label for="rating">Rating:</label>
+                <div class="star-rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <input type="hidden" id="rating" name="rating" required>
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+    </section>
+  </main>
+  <div id="edit-modal" style="display:none;">
+    <form id="editForm">
+      <input type="hidden" id="edit-id">
+      <label for="editName">Name:</label>
+      <input type="text" id="editName" name="editName" required>
+      <label for="editReview">Review:</label>
+      <textarea id="editReview" name="editReview" required></textarea>
+      <label for="editRating">Rating:</label>
+      <div class="star-rating">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+      </div>
+      <input type="hidden" id="editRating" name="editRating" required>
+      <button type="submit">Save Changes</button>
+      <button type="button" onclick="closeEditModal()">Cancel</button>
+    </form>
+  </div>
+  <script src="js/rateus.js"></script>
+  <footer>
+    &copy; 2024 Drift Destiny. All rights reserved.
+  </footer>
+</body>
+</html>

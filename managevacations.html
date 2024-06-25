@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Vacations</title>
+  <link rel="stylesheet" href="css/vacations.css">
+</head>
+<body class="manage-page">
+  <header>
+    <h1>Vacations</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="managevacations.html" class="active">Manage Vacations</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="analytics.html">Analytics</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="rateus.html">Rate Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Manage Your Vacations</h2>
+    <section id="vacations-section">
+      <div class="vacation-card">
+        <img src="css/img/kerala2.jpg" alt="Kerala">
+        <div class="vacation-info">
+          <div>
+            <h3>Kerala</h3>
+            <p>₹13,999/ per person</p>
+            <p>5 Days</p>
+          </div>
+          <button class="book-now" onclick="navigateToBookingPage('Kerala', 13999)">Book Now</button>
+        </div>
+      </div>
+      <div class="vacation-card">
+        <img src="css/img/shimla2.jpg" alt="Shimla">
+        <div class="vacation-info">
+          <div>
+            <h3>Shimla</h3>
+            <p>₹14,999/ per person</p>
+            <p>6 Days</p>
+          </div>
+          <button class="book-now" onclick="navigateToBookingPage('Shimla', 14999)">Book Now</button>
+        </div>
+      </div>
+      <div class="vacation-card">
+        <img src="css/img/gokarna2.jpg" alt="Gokarna">
+        <div class="vacation-info">
+          <div>
+            <h3>Gokarna</h3>
+            <p>₹7,999/ per person</p>
+            <p>4 Days</p>
+          </div>
+          <button class="book-now" onclick="navigateToBookingPage('Gokarna', 7999)">Book Now</button>
+        </div>
+      </div>
+      <div class="vacation-card">
+        <img src="css/img/araku2.jpeg" alt="Araku">
+        <div class="vacation-info">
+          <div>
+            <h3>Araku</h3>
+            <p>₹12,999/ per person</p>
+            <p>4 Days</p>
+          </div>
+          <button class="book-now" onclick="navigateToBookingPage('Araku', 12999)">Book Now</button>
+        </div>
+      </div>
+      <div class="vacation-card">
+        <img src="css/img/goa2.jpg" alt="Goa">
+        <div class="vacation-info">
+          <div>
+            <h3>Goa</h3>
+            <p>₹15,999/ per person</p>
+            <p>5 Days</p>
+          </div>
+          <button class="book-now" onclick="navigateToBookingPage('Goa', 15999)">Book Now</button>
+        </div>
+      </div>
+      <div class="vacation-card">
+        <img src="css/img/hampi2.jpg" alt="Hampi">
+        <div class="vacation-info">
+          <div>
+            <h3>Hampi</h3>
+            <p>₹9,999/ per person</p>
+            <p>3 Days</p>
+          </div>
+          <button class="book-now" onclick="navigateToBookingPage('Hampi', 9999)">Book Now</button>
+        </div>
+      </div>
+      <div class="vacation-card">
+        <img src="css/img/kedarnath2.jpg" alt="Kedarnath">
+        <div class="vacation-info">
+          <div>
+            <h3>Kedarnath</h3>
+            <p>₹19,999/ per person</p>
+            <p>6 Days</p>
+          </div>
+          <button class="book-now" onclick="navigateToBookingPage('Kedarnath', 19999)">Book Now</button>
+        </div>
+      </div>
+      <div class="vacation-card">
+        <img src="css/img/Char-Dham-Yatra.jpg" alt="CharDhamYatra">
+        <div class="vacation-info">
+          <div>
+            <h3>CharDhamYatra</h3>
+            <p>₹29,999/ per person</p>
+            <p>10 Days</p>
+          </div>
+          <button class="book-now" onclick="navigateToBookingPage('CharDhamYatra', 29999)">Book Now</button>
+        </div>
+      </div>
+      <div class="vacation-card">
+        <img src="css/img/pondi2.jpg" alt="Pondicherry">
+        <div class="vacation-info">
+          <div>
+            <h3>Pondicherry</h3>
+            <p>₹11,999/ per person</p>
+            <p>4 Days</p>
+          </div>
+          <button class="book-now" onclick="navigateToBookingPage('Pondicherry', 11999)">Book Now</button>
+        </div>
+      </div>
+      <div class="vacation-card">
+        <img src="css/img/ooty-coonoor2.jpg" alt="Ooty">
+        <div class="vacation-info">
+          <div>
+            <h3>Ooty</h3>
+            <p>₹13,999/ per person</p>
+            <p>5 Days</p>
+          </div>
+          <button class="book-now" onclick="navigateToBookingPage('Ooty', 13999)">Book Now</button>
+        </div>
+      </div>
+      <div class="vacation-card">
+        <img src="css/img/Wayanad2.jpg" alt="Wayanad">
+        <div class="vacation-info">
+          <div>
+            <h3>Wayanad</h3>
+            <p>₹8,999/ per person</p>
+            <p>4 Days</p>
+          </div>
+          <button class="book-now" onclick="navigateToBookingPage('Wayanad', 8999)">Book Now</button>
+        </div>
+      </div>
+      <div class="vacation-card">
+        <img src="css/img/coorg2.jpg" alt="Coorg">
+        <div class="vacation-info">
+          <div>
+            <h3>Coorg</h3>
+            <p>₹10,999/ per person</p>
+            <p>5 Days</p>
+          </div>
+          <button class="book-now" onclick="navigateToBookingPage('Wayanad', 8999)">Book Now</button>
+        </div>
+
+    </section>
+    <section id="booking-section">
+      <h3>Manage Bookings</h3>
+      <table id="booking-table">
+        <thead>
+          <tr>
+            <th>Destination</th>
+            <th>Travel Date</th>
+            <th>Number of Travelers</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script>
+    const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+
+    function navigateToBookingPage(destination, price) {
+      const url = `booking.html?destination=${encodeURIComponent(destination)}&price=${price}`;
+      window.location.href = url;
+    }
+
+    function loadBookings() {
+      const bookingTableBody = document.querySelector('#booking-table tbody');
+      bookingTableBody.innerHTML = '';
+
+      bookings.forEach((booking, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${booking.destination}</td>
+          <td>${booking.travelDate}</td>
+          <td>${booking.numTravelers}</td>
+          <td>${booking.mobile}</td>
+          <td>${booking.email}</td>
+          <td class="action-buttons">
+            <button onclick="editBooking(${index})">Edit</button>
+            <button onclick="deleteBooking(${index})">Delete</button>
+          </td>
+        `;
+        bookingTableBody.appendChild(row);
+      });
+    }
+
+    function editBooking(index) {
+      const booking = bookings[index];
+      const url = `booking.html?edit=true&index=${index}&destination=${encodeURIComponent(booking.destination)}&travelDate=${booking.travelDate}&numTravelers=${booking.numTravelers}&mobile=${booking.mobile}&email=${booking.email}`;
+      window.location.href = url;
+    }
+
+    function deleteBooking(index) {
+      bookings.splice(index, 1);
+      localStorage.setItem('bookings', JSON.stringify(bookings));
+      loadBookings();
+    }
+
+    window.onload = loadBookings;
+  </script>
+  <footer>
+    &copy; 2024 Drift Destiny. All rights reserved.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Analytics</title>
+  <link rel="stylesheet" href="css/analytics.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="analytics-page">
+  <header>
+    <h1>Booking Analytics</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="managevacations.html" >Manage Vacations</a></li>
+        <li><a href="reviews.html" >Reviews</a></li>
+        <li><a href="analytics.html" class="active">Analytics</a></li>
+        <li><a href="aboutme.html" >About Me</a></li>
+        <li><a href="rateus.html" >Rate Us</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="chart-section">
+      <h2>Popular Destinations</h2>
+    <div class="chart-container">
+      <canvas id="popularDestinationsChart"></canvas>
+    </div>
+    </section>
+    <section class="chart-section">
+    <h2>Seasonal Trends</h2>
+    <div class="chart-container">
+      <canvas id="seasonalTrendsChart"></canvas>
+    </div>
+  </section>
+  </main>
+  <script src="js/analytics.js"></script>
+  <footer>
+    &copy; 2024 Drift Destiny. All rights reserved.
+  </footer>
+</body>
+</html>
+
