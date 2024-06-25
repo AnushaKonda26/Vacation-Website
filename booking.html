@@ -11,68 +11,74 @@
     <h1>Booking</h1>
     <nav>
       <ul>
-        <li><a href="index.html" >Home</a></li>
-        <li><a href="managevacations.html" >Manage Vacations</a></li>
-        <li><a href="reviews.html" >Reviews</a></li>
-        <li><a href="analytics.html" >Analytics</a></li>
-        <li><a href="aboutme.html" >About Me</a></li>
-        <li><a href="rateus.html" >Rate Us</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="managevacations.html">Manage Vacations</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="analytics.html">Analytics</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="rateus.html">Rate Us</a></li>
       </ul>
     </nav>
   </header>
   <main class="container">
     <div class="left-column">
-      <div id="destination-title"></div>  
+      <div id="destination-title"></div>
       <img src="" alt="Destination Image" id="destination-image">
       <div id="overview"></div>
       <div id="itinerary"></div>
     </div>
-      <div class="right-column">
-        <div class="form-layout">
-          <form id="booking-form">
-            <div class="form-group">
-              <label for="title">Title</label>
-              <select id="title" name="title" required>
-                <option value="Mr.">Mr.</option>
-                <option value="Ms.">Ms.</option>
-                <option value="Mrs.">Mrs.</option>
-                <option value="Dr.">Dr.</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="first-name">First Name</label>
-              <input type="text" id="first-name" name="first-name" required>
-            </div>
-            <div class="form-group">
-              <label for="last-name">Last Name</label>
-              <input type="text" id="last-name" name="last-name" required>
-            </div>
-            <div class="form-group">
-              <label for="travel-date">Travel Date</label>
-              <input type="date" id="travel-date" name="travel-date" required>
-            </div>
-            <div class="form-group">
-              <label for="travellers">Number of Travellers</label>
-              <input type="number" id="travellers" name="travellers" value="1" min="1" required>
-            </div>
-            <div id="additional-travellers"></div>
-            <div class="form-group">
-              <label for="mobile-number">Mobile Number</label>
-              <input type="text" id="mobile-number" name="mobile-number" maxlength="10" required>
-            </div>
-            <div class="form-group">
-              <label for="email-id">Email ID</label>
-              <input type="email" id="email-id" name="email-id" required>
-            </div>
-            <button type="submit">Submit Booking</button>
-          </form>
-        </div>
-        <button id="more-vacations" onclick="window.location.href='managevacations.html'">More Vacations</button>
-        <button id="location-reviews" onclick="window.location.href='reviews.html'">Location reviews</button>
+    <div class="right-column">
+      <div class="form-layout">
+        <form id="booking-form">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <select id="title" name="title" required>
+              <option value="Mr.">Mr.</option>
+              <option value="Ms.">Ms.</option>
+              <option value="Mrs.">Mrs.</option>
+              <option value="Dr.">Dr.</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required>
+          </div>
+          <div class="form-group">
+            <label for="travel-date">Travel Date</label>
+            <input type="date" id="travel-date" name="travel-date" required min="">
+          </div>
+          <div class="form-group">
+            <label for="travellers">Number of Travellers</label>
+            <input type="number" id="travellers" name="travellers" value="1" min="1" required>
+          </div>
+          <div id="additional-travellers"></div>
+          <div class="form-group">
+            <label for="mobile-number">Mobile Number</label>
+            <input type="text" id="mobile-number" name="mobile-number" maxlength="10" required pattern="\d{10}" title="Mobile number must be 10 digits">
+          </div>
+          <div class="form-group">
+            <label for="email-id">Email ID</label>
+            <input type="email" id="email-id" name="email-id" required>
+          </div>
+          <button type="submit">Submit Booking</button>
+        </form>
       </div>
+      <button id="more-vacations" onclick="window.location.href='managevacations.html'">More Vacations</button>
+      <button id="location-reviews" onclick="window.location.href='reviews.html'">Location reviews</button>
     </div>
-
+    </div>
   </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const travelDateInput = document.getElementById('travel-date');
+      const today = new Date().toISOString().split('T')[0];
+      travelDateInput.setAttribute('min', today);
+    });
+  </script>
   <script src="js/booking.js"></script>
   <footer>
     &copy; 2024 Drift Destiny. All rights reserved.
