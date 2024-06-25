@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
       reviewCard.innerHTML = `
         <p><strong>${review.name}</strong> - ${review.rating}/5</p>
         <p>"${review.review}"</p>
-        <div class="stars">${'★'.repeat(Math.round(review.rating))}${'☆'.repeat(5 - Math.round(review.rating))}</div>
         ${review.editable ? `<button onclick="editReview(${index})">Edit</button>
         <button onclick="deleteReview(${index})">Delete</button>` : ''}
       `;
