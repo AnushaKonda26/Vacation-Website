@@ -1,5 +1,4 @@
 window.onload = function() {
-  // Dummy bookings data: total bookings per month for each location
   const monthlyBookings = {
     'Kerala': [5, 8, 3, 4, 7, 2, 9, 6, 10, 5, 4, 8],
     'Shimla': [3, 4, 5, 6, 7, 8, 9, 5, 4, 6, 8, 9],
@@ -18,7 +17,6 @@ window.onload = function() {
   const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
   const allDestinations = Object.keys(monthlyBookings);
 
-  // Add actual bookings data to dummy data
   bookings.forEach(booking => {
     const destination = booking.destination;
     const month = new Date(booking.travelDate).getMonth();
@@ -30,7 +28,6 @@ window.onload = function() {
     }
   });
 
-  // Popular Destinations Data
   const destinationCounts = allDestinations.reduce((acc, destination) => {
     acc[destination] = monthlyBookings[destination].reduce((sum, count) => sum + count, 0);
     return acc;
@@ -45,7 +42,6 @@ window.onload = function() {
     return allDestinations.reduce((sum, destination) => sum + monthlyBookings[destination][monthIndex], 0);
   });
 
-  // Popular Destinations Chart
   const ctx1 = document.getElementById('popularDestinationsChart').getContext('2d');
   const popularDestinationsChart = new Chart(ctx1, {
     type: 'bar',
@@ -67,8 +63,7 @@ window.onload = function() {
       }
     }
   });
-
-  // Seasonal Trends Chart
+  
   const ctx2 = document.getElementById('seasonalTrendsChart').getContext('2d');
   const seasonalTrendsChart = new Chart(ctx2, {
     type: 'line',
